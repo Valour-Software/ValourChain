@@ -71,5 +71,5 @@ The Valour Chain, for most purposes, is a no-fee chain. Common transactions will
 
 ### Low Barrier to Entry
 
-Most cryptocurrencies are developed using terse, complex code in programming languages that harbor a high barrier to entry like C++, and low-level networking protocols like TCP. While using such efficient languages increases network throughput, we believe that if the source code of a chain cannot be understood easily, it centralizes the developer experience to a subset of experts. Valour Chain is built on C#, an easy and flexible language, and uses common HTTP/S and Websocket communication methods which make it easy for anyone to contribute to the project.
+Most cryptocurrencies are developed using terse code designed for experts in programming languages that harbor a high barrier to entry like C++, and low-level networking protocols like TCP. While using such efficient languages increases network throughput, we believe that if the source code of a chain cannot be understood easily, it centralizes the developer experience to a subset of experts. Valour Chain is built on C#, an easy and flexible language, and uses common HTTP/S and Websocket communication methods which make it easy for anyone to contribute to the project.
 
