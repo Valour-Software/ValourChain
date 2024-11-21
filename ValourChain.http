@@ -1,0 +1,6 @@
+@ValourChain_HostAddress = http://localhost:3332
+
+GET {{ValourChain_HostAddress}}/ping
+Accept: application/json
+
+###
