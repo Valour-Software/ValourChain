@@ -62,7 +62,7 @@ public class NodeRegistryService
         {
             try
             {
-                node = await _http.GetFromJsonAsync<Node>("https://" + location);
+                node = await _http.GetFromJsonAsync<Node>("https://" + location + "/network/info");
             }
             catch (Exception e)
             {
@@ -79,7 +79,7 @@ public class NodeRegistryService
         {
             try
             {
-                node = await _http.GetFromJsonAsync<Node>("http://" + location);
+                node = await _http.GetFromJsonAsync<Node>("http://" + location + "/network/info");
             }
             catch (Exception e)
             {

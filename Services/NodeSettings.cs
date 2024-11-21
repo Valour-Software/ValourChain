@@ -12,4 +12,5 @@ public class NodeSettings
     public string Name { get; set; } = "Unnamed Node";
     public string Description { get; set; } = "A Valour Chain node.";
     public string NodeLocation { get; set; } = "NOT_SET";
+    public string WalletAddress { get; set; } = "NOT_SET";
 }
