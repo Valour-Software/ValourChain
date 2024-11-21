@@ -1,4 +1,6 @@
-﻿namespace ValourChain.Workers;
+﻿using ValourChain.Services;
+
+namespace ValourChain.Workers;
 
 /// <summary>
 /// The NodeConnectionWorker is responsible for managing the connections between nodes.
@@ -7,16 +9,28 @@
 public class NodeConnectionWorker : IHostedService, IDisposable
 {
     private readonly NodeRegistryService _nodeRegistryService;
-
-    public NodeConnectionWorker(NodeRegistryService nodeRegistryService)
+    private readonly Logger<NodeConnectionWorker> _logger;
+    
+    public NodeConnectionWorker(NodeRegistryService nodeRegistryService, Logger<NodeConnectionWorker> logger)
     {
         _nodeRegistryService = nodeRegistryService;
+        _logger = logger;
     }
     
-    public Task StartAsync(CancellationToken cancellationToken)
+    public async Task StartAsync(CancellationToken cancellationToken)
     {
-        return Task.CompletedTask;
+        _logger.Log("Starting worker...");
+        await _nodeRegistryService.LoadAllNodes();
     }
+
+    /// <summary>
+    /// Uses stored known-nodes.json to connect to known nodes.
+    /// </summary>
+    public async Task ConnectToKnown()
+    {
+        
+    }
+    
     
     public Task StopAsync(CancellationToken cancellationToken)
     {
